@@ -13,17 +13,13 @@ namespace prueba_api.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
         [Column("emp_name")]
-        [StringLength(50)]
         public string EmpName { get; set; }
-        [Required]
         [Column("emp_last_name")]
-        [StringLength(50)]
         public string EmpLastName { get; set; }
         [Column("p_type")]
         public int PType { get; set; }
-        [Column("p_date", TypeName = "date")]
+        [Column("p_date")]
         public DateTime PDate { get; set; }
 
         [ForeignKey(nameof(PType))]

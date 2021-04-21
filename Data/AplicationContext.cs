@@ -9,6 +9,11 @@ namespace prueba_api.Data
         {
         }
 
+        public AplicationContext(DbContextOptions<AplicationContext> options)
+            : base(options)
+        {
+        }
+
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<PermissionType> PermissionTypes { get; set; }
 
