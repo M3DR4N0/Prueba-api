@@ -100,7 +100,7 @@ namespace prueba_api.Controllers
             permission.PDate = permissionDto.PDate;
 
              if (permission.EmpName == "" || permission.EmpLastName == "" || permission.PDate == DateTime.MinValue || permission.PType.Equals(0)) 
-                return BadRequest( new { message = "No se aceptan campos vacios." });
+                return BadRequest( new { message = "No se aceptan campos vacios."});
 
             if (permission.PDate >= DateTime.Now)
             {
